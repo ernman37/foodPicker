@@ -24,13 +24,8 @@ else
 fi
 cd - &> error #gets rid of stupid path message
 
-g++ -o name name.cc
-names=$(who am i)
-name=$(./name $names)
-rm name
-
 #Creates tmp file for compilaiton
-echo -e "${ORANGE}Creating personal program for ${GREEN}$name ${NONE}"
+echo -e "${ORANGE}Creating personal program for ${GREEN}$USER ${NONE}"
 touch copy.cpp
 echo "/*" >> copy.cpp
 let i=0
