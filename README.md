@@ -1,5 +1,6 @@
 # foodPicker
 setup.sh: (bash)
+
  -Creates c++ program with correct file names compiled as Picker
  -Optional: Adds alias to .bash_aliases or .bash_profile if it finds them in ~ directory
 restaurants.txt:
