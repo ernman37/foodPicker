@@ -1,6 +1,6 @@
 /*
     Program: Selects random restuarant to eat
-    Options: (b)reakast, (f)astfood, (s)it-down, (n)ice, (d)rinks, (h)elp, default prints all randoms
+    Options: (b)reakast, (f)astfood, (s)it-down, (n)ice, (d)rinks, (F)ries, (p)print all selected, (h)elp, default prints all randoms
     Date: 3/21/2021
     By: Ernest Duckworth IV
 */
@@ -106,7 +106,7 @@ bool readFile(Args &options, vector<vector<string>> &ps){
     ifstream in(file);
     //returns if there is no file
     if(!in){
-        cerr << "Cannot find file restaurants.txt\n";
+        cerr << "Cannot find file '" << file << "'\n";
         return false;
     }
     string place = "";
