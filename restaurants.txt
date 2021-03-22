@@ -1,0 +1,52 @@
+Brekfast Place:
+Snooze
+Village In
+IHop
+Smoothie King
+Waffle Lab
+RISE!
+~
+Fast Food Place:
+Chic-fil-a
+Wendys
+Sonic
+Freddy's
+Popeyes
+Canes
+Taco Bell
+Culvers
+~
+Sit Down Place:
+Five Guys
+SmashBurger
+QDOBA
+Chipotle
+Fuzzys
+Cosmos
+Cuba Cuba
+Noodles
+Red Robin
+~
+Nice Place:
+La Loma
+Outback
+Mt. Fuji
+Melting Pot
+Maggianos
+Sierra
+~
+Drink Place:
+DQ
+Black Rock
+StarBucks
+Smoothie King
+Dutch Bros
+~
+Fry Place:
+Freddys
+McDonalds
+Chic-fil-a
+Canes
+Red Robin
+Culvers
+~
