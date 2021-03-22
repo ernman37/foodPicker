@@ -12,13 +12,13 @@ file="$(pwd)/restaurants.txt"
 newline="string file = \"$file\";"
 
 #checks if user has .bash_aliases or .bash_profile created
-cd 
+cd ~ 
 if test -f ".bash_aliases";
 then
-   profile="~/.bash_aliases"
+   profile="$(pwd)/.bash_aliases"
 elif test -f ".bash_profile";
 then
-   profile="~/.bash_profile"
+   profile="$(pwd)/.bash_profile"
 else
    profile='none'
 fi
@@ -48,23 +48,24 @@ rm copy.cpp
 #if person has bash file asks if they want to add alias (Optional)
 if [[ "$profile" == "none" ]];
 then
+   #No profile found
    echo -e "${ORANGE}If you wish to use globally set up a bash profile/alias file and create alias for program${NONE}"
 else
+   #Getting input
    echo -e "${ORANGE}Optional: Add alias to $profile (hit enter to skip)${PINK}"
    read -p "Alias Name: " name
+   #Tests for command
    if [[ "$name" == "" ]];
    then
       echo -e "${RED}Not adding alias${NONE}"
       echo -e "${GREEN}End Setup${NONE}"
       exit
-   fi
-   if [[ "$profile" == "~/.bash_aliases" ]];
-   then
-      echo "alias $name='$(pwd)/Picker'" >> ~/.bash_aliases
    else
-      echo "alias $name='$(pwd)/Picker'" >> ~/.bash_profile
+      #Adds alias to correct file
+      echo "alias $name='$(pwd)/Picker'" >> $profile
+      echo -e "${GREEN}Alias ${ORANGE}'$name'${GREEN} added to ${ORANGE}$profile ${GREEN}file${NONE}"
+      #Tells user how to source file
+      echo -e "${ORANGE}You must type command: '${GREEN}source $profile${ORANGE}' to execute globally${NONE}"
    fi
-   echo -e "${GREEN}Alias ${ORANGE}'$name'${GREEN} added to ${ORANGE}$profile ${GREEN}file${NONE}"
-   echo -e "${ORANGE}You must type command: '${GREEN}source $profile${ORANGE}' to execute globally${NONE}"
 fi
-echo -e "${GREEN}End Setup${NONE}"
+echo -e "${GREEN}End Setup${NONE}" #Done
