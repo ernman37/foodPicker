@@ -46,7 +46,7 @@ Option 1:
 
 -Answer prompts if you have .bash_alias or .bash_profile
 
--If you add alias dont forget to source the file!
+--If you add alias dont forget to source the file!
 
 -run new alias like "ALIAS -h'
 
@@ -75,22 +75,21 @@ Editing:
 
 -If you want to add more options ie(type of restraunts):
 
--Add new section to restuarants.txt with proper formatting '~'!
+--Add new section to restuarants.txt with proper formatting '~'!
 
--Add bool values to Args struct
+--Add bool values to Args struct
 
--Go to getoptions function
+--Go to getoptions function
 
--Add more options into the string
+---Add more options into the string
 
--add more case statements
+---add more case statements
 
--Go to addv function:
+--Go to addv function:
 
--add more case statements to represent which part of file we are in
+---add more case statements to represent which part of file we are in
 
--If you want setup.sh to still work change find where the string file is declared in main.cpp
+--If you want setup.sh to still work change find where the string file is declared in main.cpp
 
--In sh find line where it is comparing line number to 105 change to new value of string file in main.cpp
-
+---In sh find line where it is comparing line number to 105 change to new value of string file in main.cpp
 
