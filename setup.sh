@@ -24,7 +24,13 @@ else
 fi
 cd - &> error #gets rid of stupid path message
 
+g++ -o name name.cc
+names=$(who am i)
+name=$(./name $names)
+rm name
+
 #Creates tmp file for compilaiton
+echo -e "${ORANGE}Creating personal program for ${GREEN}$name ${NONE}"
 touch copy.cpp
 echo "/*" >> copy.cpp
 let i=0
@@ -39,7 +45,7 @@ do
    else
       echo $line >> copy.cpp
    fi
-done < main.cpp
+done < main.cpp #copies almost every line from main.cpp
 
 #Creates Picker program and removes tmp file
 g++ -Wall -std=c++17 -o Picker $(pwd)/copy.cpp
@@ -52,14 +58,13 @@ then
    echo -e "${ORANGE}If you wish to use globally set up a bash profile/alias file and create alias for program${NONE}"
 else
    #Getting input
-   echo -e "${ORANGE}Optional: Add alias to $profile (hit enter to skip)${PINK}"
+   echo -e "${ORANGE}Optional: Add alias to ${GREEN}$profile${ORANGE}?\n(hit enter to skip)${PINK}"
+   sleep 1
    read -p "Alias Name: " name
    #Tests for command
    if [[ "$name" == "" ]];
    then
       echo -e "${RED}Not adding alias${NONE}"
-      echo -e "${GREEN}End Setup${NONE}"
-      exit
    else
       #Adds alias to correct file
       echo "alias $name='$(pwd)/Picker'" >> $profile
@@ -68,4 +73,5 @@ else
       echo -e "${ORANGE}You must type command: '${GREEN}source $profile${ORANGE}' to execute globally${NONE}"
    fi
 fi
-echo -e "${GREEN}End Setup${NONE}" #Done
+sleep 1
+echo -e "${GREEN}End setup${NONE}" #Done
